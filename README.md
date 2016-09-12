@@ -9,4 +9,28 @@ technology and apease the programming gods.
 
 # I don't like snakes. Why are you drinking on a weekday? What are this?
 
+Don't worry. It's not that crazy. [Flask] (http://flask.pocoo.org) is a simple and
+straightforward web framework for Python that is also extremely powerful. We will start by
+building a simple website that keeps track of a todo list and then move on to building the
+Twitter clone.
+
+# Getting Started
+
 ## Installation
+
+ - [Python 2.7](https://www.python.org/downloads/)
+ - [pip](https://pip.pypa.io/en/stable/installing/)
+ - [Flask](http://flask.pocoo.org/) `pip install Flask`
+ - text editor such as [Atom](https://atom.io/) or [Sublime](https://www.sublimetext.com/)
+ - [ngrok](https://ngrok.io)
+
+## Hello Flask
+
+# Todo Application
+
+# Twitter
+
+# Resources
+
+ - Slides from workshop
+   - [Day 1](https://docs.google.com/presentation/d/1dEiIpEVzzM-szNwicFLBs2sPd8K9pZJRcnIuAG3hUzU/edit?usp=sharing)
