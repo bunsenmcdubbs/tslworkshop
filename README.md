@@ -18,19 +18,24 @@ Twitter clone.
 
 ## Installation
 
- - [Python 2.7](https://www.python.org/downloads/)
- - [pip](https://pip.pypa.io/en/stable/installing/#upgrading-pip)
-    >On Linux or OS X:
-    >```
-    >pip install -U pip
-    >```
-    >On Windows:
-    >```
-    >python -m pip install -U pip
-    >```
+ - [Python 2.7](https://www.python.org/downloads/) and [pip](https://pip.pypa.io/en/stable/installing/#upgrading-pip)
+  
+ After installing Python:
+  >  On Linux or OS X:
+  >  ```
+  >  pip install -U pip
+  >  ```
+  >  On Windows:
+  >  ```
+  >  python -m pip install -U pip
+  >  ```
+    
  - [Flask](http://flask.pocoo.org/) `pip install Flask`
+
  - text editor such as [Atom](https://atom.io/) or [Sublime](https://www.sublimetext.com/)
- - [ngrok](https://ngrok.io)
+
+ - (Optional) [ngrok](https://ngrok.io)
+
 
 ## Hello Flask
 
