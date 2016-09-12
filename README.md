@@ -39,6 +39,27 @@ Twitter clone.
 
 ## Hello Flask
 
+
+In `hello.py`:
+```
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello World!"
+
+    if __name__ == "__main__":
+        app.run()
+```
+
+Then start the web application with:
+```
+python hello.py
+```
+
+You can stop the program by pressing <kbd>Control</kbd>+<kbd>C</kbd>
+
 # Todo Application
 
 # Twitter
