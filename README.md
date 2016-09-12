@@ -62,7 +62,9 @@ You can stop the program by pressing <kbd>Control</kbd>+<kbd>C</kbd>
 
 # Todo Application
 
-# Twitter
+# Twitter Clone
+
+[MiniTwit](https://github.com/pallets/flask/tree/master/examples/minitwit)
 
 # Resources
 
