@@ -1,0 +1,13 @@
+#todo-items {
+  margin-top: 2em;
+}
+
+.done {
+  text-decoration: line-through;
+  background: gray;
+  color: white;
+}
+
+.todo-item > input[type=checkbox] {
+  margin-right: 1em;
+}

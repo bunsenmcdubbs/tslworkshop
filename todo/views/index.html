@@ -3,24 +3,58 @@
   <head>
     <meta charset="UTF-8">
     <title>Todo List | HackGT//Tech Square Labs</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <!-- Top Title Bar -->
     <header class="navbar navbar-default">
       <div class="navbar-header">
         <div class="navbar-brand">Python/Flask Workshop by HackGT &amp; Tech Square Labs</div>
       </div>
     </header>
 
+    <!-- Actual Content -->
     <div class="container">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          Todo List
-        </div>
-        <div class="panel-body">
-          body
-        </div>
+
+      <!-- "Todo List" and textbox -->
+      <h2>Todo List</h2>
+      <div class="input-group" id="create-todo">
+        <input type="text" class="form-control" placeholder="something I need to do">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button">Create!</button>
+        </span>
       </div>
+
+      <!-- Place for todo list -->
+      <ul class="list-group" id="todo-items">
+
+        <!-- This todo item is done -->
+        <li class="list-group-item todo-item done">
+          <input type="checkbox" checked="true">Learn Python
+        </li>
+
+        <!-- This is just a regular item -->
+        <li class="list-group-item todo-item">
+          <input type="checkbox">Practice more with HTML/CSS and Bootstrap
+        </li>
+
+        <li class="list-group-item todo-item">
+          <input type="checkbox">Brush up on some JavaScript
+        </li>
+
+        <li class="list-group-item todo-item">
+          <input type="checkbox">Learn some Flask
+        </li>
+
+        <li class="list-group-item todo-item">
+          <input type="checkbox">Create database model
+        </li>
+
+        <li class="list-group-item todo-item">
+          <input type="checkbox">Build a Todo List application
+        </li>
+      </ul>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
