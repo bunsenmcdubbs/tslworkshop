@@ -127,5 +127,6 @@ How does the server find and use this data? Where is `request` being used?
 
 # Resources
  - [Flask documentation](http://flask.pocoo.org/docs/0.11/)
+ - [Flask tutorial](http://flask.pocoo.org/docs/0.11/tutorial/)
  - [Slides from workshop](https://docs.google.com/presentation/d/1dEiIpEVzzM-szNwicFLBs2sPd8K9pZJRcnIuAG3hUzU/edit?usp=sharing)
- - [MiniTwit](https://github.com/pallets/flask/tree/master/examples/minitwit)
+ - [MiniTwit](https://github.com/pallets/flask/tree/master/examples/minitwit) a Twitter-clone written with Flask
