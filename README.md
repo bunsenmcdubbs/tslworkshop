@@ -107,7 +107,7 @@ from flask import Flask, json, send_from_directory, request
 ```
 
 ### `json`
-(JSON)[https://json.org] is popular format for sending data across the web.
+[JSON](https://json.org) is popular format for sending data across the web.
 XML is the other popular format. We've already seen a type of XML when we wrote
 our HTML. We are using JSON now because it is easier for humans to read and
 write and tends to be simpler to use as well.
