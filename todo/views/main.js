@@ -1,24 +1,47 @@
+$("#create-todo button").click(function(event) {
+  event.preventDefault();
+  var taskContent = $("#create-todo input[type=text]").val();
+  createTodo(taskContent);
+});
+
+getTodos();
+
+// ================
+// HELPER FUNCTIONS
+// ================
+
+/*
+ * Take JSON task array and create DOM elements and render them on the page
+ */
 function renderTodos(tasks) {
   console.log(tasks);
-  tasks.forEach(function(task) {
-    var $task = $("<li class='list-group-item todo-item" +
-      (task.done ? "done" : "") + "'>" +
-      "<input type='checkbox' " + (task.done ? "checked" : "") + ">" +
+  var $tasks = tasks.map(function(task) {
+    var $task = $("<li class='list-group-item todo-item'>" +
+      "<input type='checkbox'>" +
       task.content + "</li>");
+
+    if (task.done) {
+      $task.addClass('done');
+      $task.find('input[type=checkbox]')[0].checked = true;
+    }
 
     $task.attr('id', task.id);
 
     $task.find('input[type=checkbox]').click(function(event) {
       var done = $(this).is(':checked');
+      var id = $(this).parent().attr('id');
+
       if (done) {
-        markDone(this.attr('id'));
+        markDone(id);
       } else {
-        markUndone(this.attr('id'));
+        markUndone(id);
       }
     });
 
-    $("#todo-items").append($task);
+    return $task;
   });
+
+  $("#todo-items").html($tasks);
 }
 
 function getTodos() {
@@ -44,7 +67,3 @@ function markUndone(id) {
     renderTodos(data.tasks);
   });
 }
-
-
-
-getTodos();

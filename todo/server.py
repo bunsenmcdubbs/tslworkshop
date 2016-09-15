@@ -1,15 +1,21 @@
-from flask import Flask, json, send_from_directory
+from flask import Flask, json, send_from_directory, request
 app = Flask(__name__)
 
 taskId = -1
 class Task():
+    ## this is the contructor
     def __init__(self, content):
-        global taskId
+        global taskId ## this tells python to use the global variable we declared and assigned above
         taskId = taskId + 1
         self.id = taskId
         self.content = content
         self.done = False
 
+    ## "to string", makes printing Task objects more human-readable
+    ## similar to __str__(), they have subtle differences
+    def __repr__(self):
+        return '#%i %s' % (self.id, self.content) + (" <done>" if self.done else "")
+    ##
     def serialize(self):
         return {
             'id': self.id,
@@ -42,7 +48,7 @@ def getTasks():
 def addTask():
     content = request.form["content"]
     newTask = Task(content)
-    Tasks[newTask.id] = new_task
+    Tasks[newTask.id] = newTask
     return getTasks()
 
 @app.route("/tasks/<int:taskId>", methods=["DELETE"])
@@ -57,8 +63,8 @@ def markDone(taskId):
 
 @app.route("/tasks/<int:taskId>/undone", methods=["POST"])
 def markUndone(taskId):
-    ## TODO write this code
+    Tasks[taskId].done = False
     return getTasks()
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
