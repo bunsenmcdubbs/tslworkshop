@@ -36,7 +36,7 @@ def hello(name="World"):
 @app.route("/")
 @app.route("/<path:filepath>")
 def index(filepath="index.html"):
-    return send_from_directory("views", filepath)
+    return send_from_directory("clients", filepath)
 
 @app.route("/tasks", methods=["GET"])
 def getTasks():
