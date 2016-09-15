@@ -26,7 +26,6 @@ class Task():
             'done': self.done
         }
 
-## This will be our fake database. We will insert tasks as values and use taskIds as keys
 Tasks = {}
 
 ## this is totally optional and just for demonstration purposes, remove if you wish
@@ -51,31 +50,28 @@ def getTasks():
 
 @app.route("/tasks", methods=["POST"])
 def addTask():
-    print "NOT YET IMPLEMENTED"
-    ## get the "content" of the new todo item from the body of the request
-    ## create a new task
-    ## add new task to the `Tasks` dictionary, keyed by id
-    return getTasks() ## return all tasks
+    content = request.form["content"]
+    newTask = Task(content)
+    Tasks[newTask.id] = newTask
+    return getTasks()
 
 ## this isn't actually ever used because our client code is missing the
 ## code that sends a request to this route... do you want to try implementing
 ## the client code (HTML/JavaScript)?!?!
 @app.route("/tasks/<int:taskId>", methods=["DELETE"])
 def removeTask(taskId):
-    print "NOT YET IMPLEMENTED"
-    ## delete the task from the Tasks dictionary
-    return getTasks() ## return all tasks
+    del Tasks[taskId]
+    return getTasks()
 
 @app.route("/tasks/<int:taskId>/done", methods=["POST"])
 def markDone(taskId):
     Tasks[taskId].done = True
-    return getTasks() ## return all tasks
+    return getTasks()
 
 @app.route("/tasks/<int:taskId>/undone", methods=["POST"])
 def markUndone(taskId):
-    print "NOT YET IMPLEMENTED"
-    ## mark the task as not done
-    return getTasks() ## return all tasks
+    Tasks[taskId].done = False
+    return getTasks()
 
 ## Actually start the server!!!
 if __name__ == "__main__":
