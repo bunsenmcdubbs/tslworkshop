@@ -19,7 +19,7 @@ Twitter clone.
 ## Installation
 
  - [Python 2.7](https://www.python.org/downloads/) and [pip](https://pip.pypa.io/en/stable/installing/#upgrading-pip)
-  
+
  After installing Python:
   >  On Linux or OS X:
   >  ```
@@ -29,7 +29,7 @@ Twitter clone.
   >  ```
   >  python -m pip install -U pip
   >  ```
-    
+
  - [Flask](http://flask.pocoo.org/) `pip install Flask`
 
  - text editor such as [Atom](https://atom.io/) or [Sublime](https://www.sublimetext.com/)
@@ -62,11 +62,70 @@ You can stop the program by pressing <kbd>Control</kbd>+<kbd>C</kbd>
 
 # Todo Application
 
-# Twitter Clone
+The structure of the todo list application will remind you of the helloflask
+app. The difference here is that I put the HTML/CSS/JavaScript code into a
+separate folder called `client`. This is purely for organizational purposes
+as our project grows (it won't for this example but you can see how
+more complex sites could have multiple files of each type etc...).
 
-[MiniTwit](https://github.com/pallets/flask/tree/master/examples/minitwit)
+```
+todo/
+├── client
+│   ├── index.html
+│   ├── main.js
+│   └── style.css
+└── server.py
+```
+
+We do have to make a small change to the code in order to serve the files
+from this new location.
+
+```
+...
+def index(filepath="index.html"):
+    return send_from_directory("", filepath)
+...
+```
+Becomes
+```
+...
+def index(filepath="index.html"):
+    return send_from_directory("client", filepath)
+...
+```
+
+## New Flask Functionality
+
+In order to add more functionality into our web application, we need to use
+more of Flask's features!
+
+Before (in the helloflask app) we only had `Flask` and `send_from_directory`
+in our import statement. We will now need `json` and `request` as well.
+
+```
+from flask import Flask, json, send_from_directory, request
+```
+
+### `json`
+(JSON)[https://json.org] is popular format for sending data across the web.
+XML is the other popular format. We've already seen a type of XML when we wrote
+our HTML. We are using JSON now because it is easier for humans to read and
+write and tends to be simpler to use as well.
+
+JSON has the added benefit very closely resembling the notation that Python
+uses for dictionaries.
+
+Our application is only using `json` in one place... can you find it?
+
+### `request`
+This allows us to interact with the content of the request in Python. Open up
+the "Network" tab of your browser's developer tools and look at the request for
+creating new events.
+
+Do you notice anything different from the `GET` requests we've been making?
+How does the server find and use this data? Where is `request` being used?
 
 # Resources
-
- - Slides from workshop
-   - [Day 1](https://docs.google.com/presentation/d/1dEiIpEVzzM-szNwicFLBs2sPd8K9pZJRcnIuAG3hUzU/edit?usp=sharing)
+ - [Flask documentation](http://flask.pocoo.org/docs/0.11/)
+ - [Slides from workshop](https://docs.google.com/presentation/d/1dEiIpEVzzM-szNwicFLBs2sPd8K9pZJRcnIuAG3hUzU/edit?usp=sharing)
+ - [MiniTwit](https://github.com/pallets/flask/tree/master/examples/minitwit)
