@@ -16,7 +16,7 @@ class Task():
     ## "to string", makes printing Task objects more human-readable in your terminal
     ## similar to __str__(), they have subtle differences
     def __repr__(self):
-        return '#%i %s' % (self.id, self.content) + (" <done>" if self.done else "")
+        return 'id:%i done:%s content:%s' % (self.id, self.done, self.content)
 
     ## Where is this used? What is it doing?
     def serialize(self):

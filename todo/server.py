@@ -16,7 +16,7 @@ class Task():
     ## "to string", makes printing Task objects more human-readable in your terminal
     ## similar to __str__(), they have subtle differences
     def __repr__(self):
-        return '#%i %s' % (self.id, self.content) + (" <done>" if self.done else "")
+        return 'id:%i done:%s content:%s' % (self.id, self.done, self.content)
 
     ## Where is this used? What is it doing?
     def serialize(self):
@@ -68,7 +68,8 @@ def removeTask(taskId):
 
 @app.route("/tasks/<int:taskId>/done", methods=["POST"])
 def markDone(taskId):
-    Tasks[taskId].done = True
+    print "NOT YET IMPLEMENTED"
+    ## set done=True for the task in Tasks (use the taskId as the key) 
     return getTasks() ## return all tasks
 
 @app.route("/tasks/<int:taskId>/undone", methods=["POST"])
