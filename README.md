@@ -62,6 +62,8 @@ You can stop the program by pressing <kbd>Control</kbd>+<kbd>C</kbd>
 
 # Todo Application
 
+![Screencast of Todo List Application](http://i.imgur.com/bUyp8s5.gif)
+
 The structure of the todo list application will remind you of the helloflask
 app. The difference here is that I put the HTML/CSS/JavaScript code into a
 separate folder called `client`. This is purely for organizational purposes
