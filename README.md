@@ -7,6 +7,9 @@ Twitter-like web app using Python with the Flask web framework. Along the way, w
 using HTML, CSS, a lil drop of Javascript and some dark, dark magic to grease the wheels of
 technology and apease the programming gods.
 
+Accompanying slides (only used to intro, the rest was live-coding) can be found
+(here)[https://drive.google.com/open?id=1dEiIpEVzzM-szNwicFLBs2sPd8K9pZJRcnIuAG3hUzU]
+
 # I don't like snakes. Why are you drinking on a weekday? What are this?
 
 Don't worry. It's not that crazy. [Flask] (http://flask.pocoo.org) is a simple and
