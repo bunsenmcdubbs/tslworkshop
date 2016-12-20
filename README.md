@@ -8,7 +8,7 @@ using HTML, CSS, a lil drop of Javascript and some dark, dark magic to grease th
 technology and apease the programming gods.
 
 Accompanying slides (only used to intro, the rest was live-coding) can be found
-(here)[https://drive.google.com/open?id=1dEiIpEVzzM-szNwicFLBs2sPd8K9pZJRcnIuAG3hUzU]
+[here](https://drive.google.com/open?id=1dEiIpEVzzM-szNwicFLBs2sPd8K9pZJRcnIuAG3hUzU)
 
 # I don't like snakes. Why are you drinking on a weekday? What are this?
 
