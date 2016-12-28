@@ -5,7 +5,7 @@ app = Flask(__name__)
 taskId = -1
 
 class Task():
-    ## this is the contructor
+    ## this is the constructor
     def __init__(self, content):
         global taskId ## this tells python to use the global variable we declared and assigned above
         taskId = taskId + 1
